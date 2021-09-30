@@ -47,7 +47,7 @@
     {"name": "Corner_Right:3", "x": 23, "y": 3, "type": "COLLISION"},
 
     {"name": "Bridge_Left", "x": 16, "y": 2, "type": "COLLISION"},
-    {"name": "Bridge_Center", "x": 17, "y": 2, "type": "COLLISION"},
+    {"name": "Bridge_Center", "x": 17, "y"                                                                                                                                                                                           : 2, "type": "COLLISION"},
     {"name": "Bridge_Right", "x": 18, "y": 2, "type": "COLLISION"},
 
     {"name": "Bridge_Thin_Left", "x": 16, "y": 3, "type": "COLLISION"},

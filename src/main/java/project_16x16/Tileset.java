@@ -228,4 +228,9 @@ public class Tileset {
 			loadedTiles++;
 		}
 	}
+
+	public static class getTile extends PImage {
+		public getTile(int i, int i1, int i2, int i3, int i4) {
+		}
+	}
 }
