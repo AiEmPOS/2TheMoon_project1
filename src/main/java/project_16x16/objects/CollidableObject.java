@@ -47,6 +47,14 @@ public class CollidableObject extends EditableObject {
 		pos = new PVector(x, y);
 	}
 
+	public CollidableObject(SideScroller a) {
+		super(a);
+		flag = "";
+		type = type.COLLISION;
+		pos = new PVector(0, 0);
+	}
+
+
 	public void display() {
 
 		if (height / 4 % 2 != 0) {

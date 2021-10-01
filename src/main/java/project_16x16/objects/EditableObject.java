@@ -50,7 +50,13 @@ public abstract class EditableObject extends PClass {
 		editOffset = new PVector(0, 0);
 		gameScene = g;
 	}
-	
+
+	public EditableObject(SideScroller a) {
+		super(a);
+		pos = new PVector(0,0);
+		editOffset = new PVector(0, 0);
+	}
+
 	public abstract void display();
 	public abstract void debug();
 	public abstract JSONObject exportToJSON(); 
