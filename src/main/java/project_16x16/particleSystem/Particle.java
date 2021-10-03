@@ -47,7 +47,7 @@ public class Particle {
 	public void run() {
 		if (!isDead()) {
 			update();
-			draw();
+//			draw();
 		}
 	}
 	

@@ -49,7 +49,7 @@ public class Particles {
 		return p;
 	}
 	
-	private void runParticles() {
+	public void runParticles() {
 		ArrayList<Particle> deadParticles = new ArrayList<Particle>();
 		for(Particle p : activeParticles) {
 			p.run();
