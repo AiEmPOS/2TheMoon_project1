@@ -13,13 +13,15 @@ public class ProjectileTest {
     private final SideScroller sc = mock(SideScroller.class);
     private final GameplayScene gs = mock(GameplayScene.class);
 
+    private ProjectileObject po;
+
     @BeforeEach
     void setup(){
+        po = new ProjectileObject(sc, gs);
     }
 
     @Test
     void projectileTest(){
-        ProjectileObject po = new ProjectileObject(sc, gs);
         Assertions.assertEquals(sc, po.applet);
         Assertions.assertEquals(gs, po.gameScene);
         System.out.println(po.width + " " + po.height);
