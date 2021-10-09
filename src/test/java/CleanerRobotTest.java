@@ -1,3 +1,7 @@
+/* Copyright (C) 2021 Phonarnun Tatiyamaneekul - All Rights Reserved
+ * You may use, distribute and modify this code under the terms of the XYZ license.
+ */
+
 import org.junit.jupiter.api.*;
 import processing.core.PVector;
 import project_16x16.SideScroller;
@@ -14,17 +18,18 @@ public class CleanerRobotTest {
     private CleanerRobot Temp_CleanerRobot;
     private final GameplayScene Temp_GameplayScene = mock(GameplayScene.class);
     Class CleanerRobotClass;
+    Method getDistanceMethod;
     @BeforeAll
-    void setup() {
+    void setup() throws NoSuchMethodException {
         Temp_CleanerRobot = new CleanerRobot(Temp_SideScroller,Temp_GameplayScene);
         CleanerRobotClass = CleanerRobot.class;
+        getDistanceMethod = CleanerRobotClass.getDeclaredMethod("getDistance",PVector.class,PVector.class);
+        getDistanceMethod.setAccessible(true);
     }
 
-    @Test
+    @Test // Pair-Wise [ISP Criteria]
     void TestGetDistance() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-        Method getDistanceMethod = CleanerRobotClass.getDeclaredMethod("getDistance",PVector.class,PVector.class);
-        getDistanceMethod.setAccessible(true);
-
+        System.out.println("=== Test RobotCleaner.getDistance ===");
         // < 0, < 0, < 0, < 0
         PVector data_1 = new PVector(2,3);
         PVector data_2 = new PVector(3,2);
