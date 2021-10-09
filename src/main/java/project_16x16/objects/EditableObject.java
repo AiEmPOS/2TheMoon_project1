@@ -50,7 +50,7 @@ public abstract class EditableObject extends PClass {
 		editOffset = new PVector(0, 0);
 		gameScene = g;
 	}
-	
+
 	public abstract void display();
 	public abstract void debug();
 	public abstract JSONObject exportToJSON(); 

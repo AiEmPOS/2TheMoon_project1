@@ -43,7 +43,7 @@ public class CleanerRobot extends Enemy {
 		posB = x2;
 		target = posA;
 	}
-	
+
 	public void update() {
 		super.update();
 		velocity.set(velocity.x, velocity.y + gravity);

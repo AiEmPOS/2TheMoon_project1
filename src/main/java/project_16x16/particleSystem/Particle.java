@@ -47,7 +47,7 @@ public class Particle {
 	public void run() {
 		if (!isDead()) {
 			update();
-//			draw();
+//			draw(); //commented out to avoid NullPointerException in the test cases; Approved by Aj.Aun
 		}
 	}
 	

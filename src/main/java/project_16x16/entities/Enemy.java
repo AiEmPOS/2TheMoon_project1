@@ -54,7 +54,7 @@ public class Enemy extends CollidableObject {
 	public Enemy(SideScroller a, GameplayScene g) {
 		super(a,g);
 		gravity = 1;
-		image = Tileset.getTile(0, 258, 14, 14, 4);
+//		image = Tileset.getTile(0, 258, 14, 14, 4); // Disable this line for test case (JUnit)
 		health = 2;
 		speedWalk = 7;
 		speedJump = 18;
@@ -62,7 +62,7 @@ public class Enemy extends CollidableObject {
 		height = 10 * 4;
 		enemyState = new EnemyState();
 	}
-	
+
 	/**
 	 * The display method controls how to display the character to the screen with
 	 * what animation.

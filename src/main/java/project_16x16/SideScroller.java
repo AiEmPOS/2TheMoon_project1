@@ -20,6 +20,7 @@ import processing.javafx.PSurfaceFX;
 
 import project_16x16.Options.option;
 import project_16x16.components.AnimationComponent;
+import project_16x16.components.Tile;
 import project_16x16.entities.Player;
 import project_16x16.multiplayer.Multiplayer;
 import project_16x16.scene.*;
@@ -424,11 +425,11 @@ public class SideScroller extends PApplet {
 	 * Any object that is transformed by the camera (ie. not HUD elements) and uses
 	 * mouse position in any manner should use this method to access the mouse
 	 * coordinate (ie. where the mouse is in the game world). Such objects should
-	 * not reference the PApplet's {@link processing.core.PApplet.mouseX mouseY}
+	 * not reference the PApplet's {@link //processing.core.PApplet.mouseX mouseY}
 	 * variable.
 	 * 
 	 * @return Mouse Coordinate [Game World]
-	 * @see {@link org.gicentre.utils.move.ZoomPan#getMouseCoord() getMouseCoord()}
+	 * @see {@link //org.gicentre.utils.move.ZoomPan#getMouseCoord() getMouseCoord()}
 	 * @see #getMouseCoordScreen()
 	 */
 	public PVector getMouseCoordGame() {

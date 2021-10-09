@@ -49,7 +49,7 @@ public class Particles {
 		return p;
 	}
 	
-	public void runParticles() {
+	public void runParticles() { //change to public for ease of testing; Approved by Aj.Aun
 		ArrayList<Particle> deadParticles = new ArrayList<Particle>();
 		for(Particle p : activeParticles) {
 			p.run();
