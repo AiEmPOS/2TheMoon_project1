@@ -14,8 +14,8 @@ public class EnemyTest {
     @BeforeAll
     void setup() {
         Temp_SideScroller = new SideScroller();
-        Temp_Enemy = new Enemy(Temp_SideScroller);
-        Temp_CollidableObject = new CollidableObject(Temp_SideScroller);
+//        Temp_Enemy = new Enemy(Temp_SideScroller);
+//        Temp_CollidableObject = new CollidableObject(Temp_SideScroller);
         EnemyClass = Enemy.class;
     }
 

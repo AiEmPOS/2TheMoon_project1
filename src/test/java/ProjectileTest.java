@@ -7,7 +7,6 @@ import project_16x16.projectiles.ProjectileObject;
 import project_16x16.scene.GameplayScene;
 
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
 public class ProjectileTest {
 
@@ -40,7 +39,10 @@ public class ProjectileTest {
 
     @Test
     void collisionFalseTest(){
+        //every attribute is 0
         Assertions.assertEquals(false, po.collides(co));
+
+
     }
 
     @Test
