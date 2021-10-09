@@ -1,4 +1,7 @@
-import javafx.geometry.Pos;
+/* Copyright (C) 2021 Natchanon Thanawaree - All Rights Reserved
+ * You may use, distribute and modify this code under the terms of the GPL license.
+ */
+
 import org.junit.jupiter.api.*;
 import java.lang.reflect.*;
 
@@ -264,26 +267,35 @@ public class ParticleTest {
         }
     }
 
-    //ACoC
+    //ECC
     @Test
     void TestRunParticle(){
 
         //Each particle has 6 frame lifespan
         ParticleSystem s = new ParticleSystem(this.s, new Tileset.getTile(298, 291, 9, 9, 4), 1, 1, (float) 0.1);
 
-        //Has no particle
+        //Has no particle && Run for some lifespan
         Assertions.assertEquals(false, s.particles.hasActiveParticles());
         Assertions.assertEquals(0, s.particles.inactiveParticles.size());
 
-        //Has particles
+        for (int i = 0; i < 3; i++){
+            s.particles.runParticles();
+        }
+
+        //Has 2 particles && run for some lifespan
         s.particles.newParticle();
         s.particles.newParticle();
+
+        for (int i = 0; i < 3; i++){
+            s.particles.runParticles();
+        }
+
         Assertions.assertEquals(true, s.particles.hasActiveParticles());
         Assertions.assertEquals(0, s.particles.inactiveParticles.size());
 
-
-        //Run for all lifespan
-        for (int i = 0; i < 6; i++){
+        //Has 2 particles && Run for all lifespan
+        //Run another 3 epochs to end their life
+        for (int i = 0; i < 3; i++){
             s.particles.runParticles();
         }
 
@@ -292,7 +304,7 @@ public class ParticleTest {
 
     }
 
-    //ECC
+    //ACoC
     @Test
     void TestNewParticle(){
 
@@ -300,13 +312,13 @@ public class ParticleTest {
 
         //No Active Particle
         Assertions.assertEquals(0, s.particles.activeParticles.size());
-        //1 Active Particle
         s.particles.newParticle();
         Assertions.assertEquals(1, s.particles.activeParticles.size());
-        //>1 Active Particle
+
+        //1 Active Particle
         s.particles.newParticle();
-        s.particles.newParticle();
-        Assertions.assertEquals(3, s.particles.activeParticles.size());
+        Assertions.assertEquals(2, s.particles.activeParticles.size());
+
     }
 
 }
