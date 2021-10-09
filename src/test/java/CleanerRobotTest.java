@@ -29,6 +29,7 @@ public class CleanerRobotTest {
 
     @Test // Pair-Wise [ISP Criteria]
     void TestGetDistance() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+        System.out.println("=== Test RobotCleaner.getDistance ===");
         // < 0, < 0, < 0, < 0
         PVector data_1 = new PVector(2,3);
         PVector data_2 = new PVector(3,2);

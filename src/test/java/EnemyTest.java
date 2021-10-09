@@ -32,6 +32,7 @@ public class EnemyTest {
 
     @Test // ECC [ISP Criteria]
     void TestCollides() throws InvocationTargetException, IllegalAccessException {
+        System.out.println("=== Test Enemy.collides ===");
         // <0,<0,0,0,<0,<0,0,0
         Temp_Enemy.pos.x = -27;
         Temp_Enemy.pos.y = -24;
