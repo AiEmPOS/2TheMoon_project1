@@ -1,3 +1,7 @@
+/* Copyright (C) 2021 Phonarnun Tatiyamaneekul - All Rights Reserved
+ * You may use, distribute and modify this code under the terms of the XYZ license.
+ */
+
 import org.junit.jupiter.api.*;
 import processing.core.PVector;
 import project_16x16.SideScroller;
@@ -20,7 +24,7 @@ public class CleanerRobotTest {
         CleanerRobotClass = CleanerRobot.class;
     }
 
-    @Test
+    @Test // Pair-Wise [ISP Criteria]
     void TestGetDistance() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         Method getDistanceMethod = CleanerRobotClass.getDeclaredMethod("getDistance",PVector.class,PVector.class);
         getDistanceMethod.setAccessible(true);
