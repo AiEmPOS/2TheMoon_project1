@@ -43,7 +43,7 @@ public class ProjectileTest {
     }
 
     @Test
-    void collisionFalseTest(){
+    void collisionTest(){
         //BCC
 
         //Base Choice: >0, >0, >0, >0
