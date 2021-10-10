@@ -274,13 +274,13 @@ public class ParticleTest {
         //Each particle has 6 frame lifespan
         ParticleSystem s = new ParticleSystem(this.s, new Tileset.getTile(298, 291, 9, 9, 4), 1, 1, (float) 0.1);
 
-        //Has no particle && Run for some lifespan
-        Assertions.assertEquals(false, s.particles.hasActiveParticles());
-        Assertions.assertEquals(0, s.particles.inactiveParticles.size());
-
         for (int i = 0; i < 3; i++){
             s.particles.runParticles();
         }
+
+        //Has no particle && Run for some lifespan
+        Assertions.assertEquals(false, s.particles.hasActiveParticles());
+        Assertions.assertEquals(0, s.particles.inactiveParticles.size());
 
         //Has 2 particles && run for some lifespan
         s.particles.newParticle();

@@ -33,6 +33,7 @@ public class EnemyTest {
     @Test // ECC [ISP Criteria]
     void TestCollides() throws InvocationTargetException, IllegalAccessException {
         System.out.println("=== Test Enemy.collides ===");
+        //Enemy.x, Enemy.y, Enemy.width, Enemy.height ,CollidableObject.x, CollidableObject.y, CollidableObject.width, CollidableObject.height
         // <0,<0,0,0,<0,<0,0,0
         Temp_Enemy.pos.x = -27;
         Temp_Enemy.pos.y = -24;
@@ -41,11 +42,12 @@ public class EnemyTest {
         Temp_CollidableObject.pos = new PVector(-27,-24);
         Temp_CollidableObject.height = 0;
         Temp_CollidableObject.width = 0;
-        //Check that Enemy
+        //Check that Enemy is outside the map or not
         Boolean Enemy_IsOutsideTheMap = false;
         if (Temp_Enemy.pos.x < 0 || Temp_Enemy.pos.y < 0) {
             Enemy_IsOutsideTheMap = true;
         }
+        //Check that Collidable is outside the map or not
         Boolean CollidableObject_IsOutsideTheMap = false;
         if (Temp_CollidableObject.pos.x < 0 || Temp_CollidableObject.pos.y < 0) {
             CollidableObject_IsOutsideTheMap = true;

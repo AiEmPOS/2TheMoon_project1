@@ -31,6 +31,7 @@ public class CleanerRobotTest {
     void TestGetDistance() throws InvocationTargetException, IllegalAccessException {
         System.out.println("=== Test RobotCleaner.getDistance ===");
         // Interface-Based // Pair-Wise [ISP Criteria]
+        // data_1.x, data_1.y, data_2.x, data_2.y
         // < 0, < 0, < 0, < 0
         PVector data_1 = new PVector(2,3);
         PVector data_2 = new PVector(3,2);
@@ -102,6 +103,7 @@ public class CleanerRobotTest {
         System.out.println("Test Case 9 Passed");
 
         //Functionality-Based // ACoC [ISP Criteria]
+        // AreData_1andData_2Similar
         // True
         data_1.x = 45;
         data_1.y = 12;
