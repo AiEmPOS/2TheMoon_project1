@@ -75,7 +75,7 @@ public class ProjectileTest {
         po.pos.y = -5;
         Assertions.assertEquals(false, po.collides(co));
 
-        //Choice: >0, >0, <0, >0
+        //Choice: >0, >0, <0, 0
         po.width = 2;
         po.height = 2;
         po.pos.x = -3;
