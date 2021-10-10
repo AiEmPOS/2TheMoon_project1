@@ -1,75 +1,192 @@
-![discord](https://img.shields.io/discord/310521827749265409?color=%23738adb&label=Discord&logo=Stephcraft)
-[![Open Source Helpers](https://www.codetriage.com/stephcraft/project-16x16/badges/users.svg)](https://www.codetriage.com/stephcraft/project-16x16)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/968c04792ffc4536ac7b9428ed79997d)](https://www.codacy.com/manual/micycle1/Project-16x16?utm_source=github.com&utm_medium=referral&utm_content=Stephcraft/Project-16x16&utm_campaign=Badge_Grade)
-[![Language grade: Java](https://img.shields.io/lgtm/grade/java/g/Stephcraft/Project-16x16.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Stephcraft/Project-16x16/context:java)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/Stephcraft/Project-16x16.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Stephcraft/Project-16x16/alerts/)
+# 2TheMoon Project
+## Particle Class Test
+### 1.TestNewPosition()
+**Test function:** AreaEmission.newPosition()
 
-# Project-16x16
+**Goal:** To test if the new position is calculated correctly
 
-Looking forward to contribute to an awesome open source project? Well here is a good one! Project 16x16 is a 2D Platformer game made with java and processing. **You** are able to contribute to this project. The goal is to make a cool game in processing together, that includes **You**. Plus, if you are not a programmer, well this is a game so we need cool ideas for gameplay mechanics, original story concepts, level designers, also people who can create soundtracks/audio, and artists! We are already using the amazing industrial tileset made by [0x72](https://0x72.itch.io/16x16-industrial-tileset), **but!** additional art is needed like UI designs, effects and **epic bosses for epic boss fights** ;)
+**Input:** spread < float >, position < PVector >
 
-## How do I start!
+**Return:** newPosition < PVector >
 
-Wow!! This project seems **EPIC!** Right? And its made in processing, like _whhhooaaahht_ ! So how do I get in, how do I start? Simple:
+**Exceptional Behavior:** --
 
-First, join our [Discord server](https://discord.gg/zDJSCqd) this is where anything and everything (not just code) related to development is discussed.
+**Model:**
+![TestNewPosition_Model](https://i.imgur.com/0nHHLzq.png)
 
-#### Programmers
+**Combination:** Pair-wise
 
-1. Want to learn how to code? [dive right in](http://hello.processing.org)
-2. Don't know processing? [their official website](https://processing.org/)
-3. Still don't know processing? [Epic processing tutorials by the CodingTrain on YouTube](https://www.youtube.com/watch?v=2VLaIr5Ckbs&list=PLRqwX-V7Uu6ZYJC7L-r6rX6utt6wwJCyi)
-4. Now you should know processing, but maybe you've never used the Eclipse IDE before, [tutorial here](https://web.archive.org/web/20190316234615/https://processing.org/tutorials/eclipse/)
-5. First time contributing to an open source project? [we made CONTRIBUTING.md just for you](https://github.com/Stephcraft/Project-16x16/blob/master/CONTRIBUTING.md)
-6. Okay, now you are ready to setup the project inside the code editor, [read this wiki](https://github.com/Stephcraft/Project-16x16/wiki/Setting-up-the-project)
-7. Have fun coding and meeting other contributors on discord :D
+**Test Case:**
+![TestNewPosition_Test_Case](https://i.imgur.com/9lMIVjo.png)
+	
+---
 
-#### Other developers
+### 2.TestEmissionVelocity()
+**Test function:** AreaEmission.newVelocity(float phi)
 
--   Write your ideas in the folder `idea`, preferably with the `.md` file format or share on Discord directly!
+**Goal:** To test if new velocity vector is calculated correctly
 
-## Overall goal
+**Input:** velocity < float >, phi < float >
 
-The goal of the project is to create an amazing video game with processing to make people go WOW. We are going the extra mile to show what can be achieved with processing and to understand from A to Z how we made it. We are building a big project from scratch to inspire others.
+**Return:** newVelocity < PVector >
 
-> Contribution to an open source project is a great element to display on your portfolio
+**Exceptional Behavior:** --
 
-## Gallery
+**Model:**
+![TestEmissionVelocity_Model](https://i.imgur.com/w7KQYXA.png)
 
-### Main Menu
+**Combination:** MBCC
 
-![Showcasing the main menu, which features an animated background. Four buttons, start game, multiplayer, settings, quit game](https://i.imgur.com/K2zBp9t.png)
+**Test Case:**
+![TestEmissionVelocity_Test_Case](https://i.imgur.com/tqxh23J.png)
+	
+---
 
-### In game
+### 3.TestEmissionAcceleration()
+**Test function:** AreaEmission.newAcceleration(float phi)
 
-![Showcasing how the in game looks like. In top left the player has 6 slots to hold items within the editing system. Four buttons, edit, inventory, play, save](https://i.imgur.com/nv1PxgS.png)
+**Goal:** To test if new acceleration is calculated correctly
 
-### Multiplayer
+**Input:** acceleration < float >, phi < float >
 
-![Showcasing the multiplayer. Three buttons, host a game, connect to a game, quit game.](https://i.imgur.com/dy6uLRQ.png)
+**Return:** newAcceleration < PVector >
 
-### Settings
+**Exceptional Behavior:** --
 
-![Showcasing the settings.Five buttons, configure graphics, configure audio and volume, configure controls, apply, quit](https://i.imgur.com/bK6LAjf.png)
+**Model:**
+![TestEmissionAcceleration_Model](https://i.imgur.com/w7KQYXA.png)
 
-### Host
+**Combination:** MBCC
 
-![Showcasing the host, text input for IP and port, 2 buttons, host, back to menu](https://i.imgur.com/zF2Ri53.png)
+**Test Case:**
+![TestEmissionAcceleration_Test_Case](https://i.imgur.com/EbK2pDH.png)
+		
+---
 
-### Client
+### 4.TestRunParticle()
+**Test function:** ParticleSystem.runParticle()
 
-![Showcasing the client, text input for IP and port, 2 buttons, connect, back to menu](https://i.imgur.com/JAZ2TER.png)
+**Input:** ActiveParticle< Particle >[] < ArrayList >
 
-### Multiplayer showcase (Host)
+**Goal:** To test if the run function is perform correctly and the dead particle is sent to InactiveParticle array list
 
-![Showcasing multiplayer, host looking at the client connected player](https://i.imgur.com/YuCtZDq.png)
+**Return:** ActiveParticle< Particle >[] < ArrayList >, InactiveParticle< Particle >[] < ArrayList >
 
-### Multiplayer showcase (Client)
+**Exceptional Behavior:** --
 
-![Showcasing multiplayer, client looking at the host connected player](https://i.imgur.com/DYQNXC1.png)
+**Model:**
+![TestRunParticle_Model](https://i.imgur.com/dRwY3gF.png)
 
-### Gameplay showcase
+**Combination:** ECC
 
-![Showcasing gameplay which the project offers](https://img.itch.zone/aW1hZ2UvMTYyMzY0Lzc3MzkzMy5naWY=/794x1000/K7WB6P.gif)
+**Test Case:**
+![TestRunParticle_Test_Case](https://i.imgur.com/lnlpuc5.png)
+		
+---
 
-Art by 0x72 (more [here](https://0x72.itch.io/16x16-industrial-tileset)).
+### 5.TestNewParticle()
+**Test function:** ParticleSystem.runParticle()
+
+**Goal:** To test if particle is created and added to ActiveParticle correctly
+
+**Input:** ActiveParticle< Particle >[] < ArrayList >
+
+**Return:** ActiveParticle< Particle >[] < ArrayList >
+
+**Exceptional Behavior:** --
+
+**Model:**
+![TestNewParticle_Model](https://i.imgur.com/sogQ5E7.png)
+
+**Combination:** ACoC
+
+**Test Case:**
+![TestNewParticle_Test_Case](https://i.imgur.com/HAb8ink.png)
+	
+---
+
+## CleanerRobot Class Test
+### 6.TestGetDistance()
+**Test function:** CleanerRobot.getDistance()
+
+**Goal:** to test if the distance value is correctly provided.
+
+**Input:** PVector , PVector
+
+**Return:** Double
+
+**Exceptional Behavior:** --
+
+**Model:**
+![TestGetDistance_Model](https://i.imgur.com/xhPqfYX.png)
+
+**Combination:** Pair-Wise
+
+**Test Case:**
+![TestGetDistance_Test_Case](https://i.imgur.com/sYF5eTL.png)
+	
+---
+## Enemy Class Test
+### 7.TestCollides()
+**Test function:** Enemy.Collides()
+
+**Goal:** To test if the collide function performs correctly and the enemy is not outside the map.
+
+**Input:** CollidableObject, CollidableObject
+
+**Return:** Boolean
+
+**Exceptional Behavior:** --
+
+**Model:**
+![TestCollides_Model](https://i.imgur.com/sLhGk3G.png)
+
+**Combination:** ECC
+
+**Test Case:**
+![TestCollides_Test_Case](https://i.imgur.com/dXNrWUU.png)
+
+---
+
+## Tile Class Test
+### 8.TestGetTileType()
+**Test function:** Tile.getTiletype()
+
+**Goal:** To test if a specific tile has the correct tile type
+
+**Input:** Tile
+
+**Return:** Tile.tiletype  (COLLISION, OBJECT, BACKGROUND, ENTITY)
+
+**Exceptional behavior:** --
+
+**Model:**
+![TestGetTileType_Model](https://i.imgur.com/r9fhrYb.png)
+
+**Combination:** ACoC
+
+**Test Case:**
+![TestGetTileType_Test_Case](https://i.imgur.com/xPru1TC.png)
+
+---
+
+### 9.TestGetPImage()
+**Test function:** Tile.getPImage()
+
+**Goal:** To test if the tile has PImage.
+
+**Input:** Tile
+
+**Return:** Image
+
+**Exceptional behavior:** --
+
+**Model:**
+![TestGetPImage_Model](https://i.imgur.com/wWHBXVe.png)
+
+**Combination:** ECC
+
+**Test Case:**
+![TestGetPImage_Test_Case](https://i.imgur.com/7OaA0uw.png)
+
+---
