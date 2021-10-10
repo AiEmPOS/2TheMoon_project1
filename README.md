@@ -66,9 +66,9 @@
 ### 4.TestRunParticle()
 **Test function:** ParticleSystem.runParticle()
 
-**Input:** ActiveParticle< Particle >[] < ArrayList >
+**Goal:** To test if the run function is perform correctly, and the dead particle is sent to InactiveParticle array list
 
-**Goal:** To test if the run function is perform correctly and the dead particle is sent to InactiveParticle array list
+**Input:** ActiveParticle< Particle >[] < ArrayList >
 
 **Return:** ActiveParticle< Particle >[] < ArrayList >, InactiveParticle< Particle >[] < ArrayList >
 
