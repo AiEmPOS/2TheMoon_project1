@@ -28,23 +28,10 @@ public class ProjectileTest {
     }
 
     @Test
-    void projectileTest(){
-        Assertions.assertEquals(sc, po.applet);
-        Assertions.assertEquals(gs, po.gameScene);
-        Assertions.assertEquals(0, po.width);
-        Assertions.assertEquals(0, po.height);
-        Assertions.assertEquals("", po.id);
-        Assertions.assertEquals(0, po.spawnTime);
-        Assertions.assertNotNull(po.animation);
-        Assertions.assertEquals(0, po.direction);
-        Assertions.assertEquals(0, po.prevDirection);
-        Assertions.assertEquals(0, po.speed);
-        Assertions.assertEquals(false, po.hit);
-    }
-
-    @Test
     void collisionTest(){
         //BCC
+
+        //Interface
 
         //Base Choice: >0, >0, >0, >0
         po.width = 2;
@@ -95,10 +82,70 @@ public class ProjectileTest {
         po.pos.y = 0;
         Assertions.assertEquals(false, po.collides(co));
 
+        //Functionality
+
+        //Base Choice: Left, False
+        po.width = 2;
+        po.height = 2;
+        po.pos.x = 3;
+        po.pos.y = 5;
+        Assertions.assertEquals(true, po.collides(co));
+
+        //Choice: Top Left, False
+        po.width = 2;
+        po.height = 2;
+        po.pos.x = 3;
+        po.pos.y = 6;
+        Assertions.assertEquals(true, po.collides(co));
+
+        //Choice: Top, False
+        po.width = 2;
+        po.height = 2;
+        po.pos.x = 4;
+        po.pos.y = 6;
+        Assertions.assertEquals(true, po.collides(co));
+
+        //Choice: Top Right, False
+        po.width = 2;
+        po.height = 2;
+        po.pos.x = 5;
+        po.pos.y = 6;
+        Assertions.assertEquals(true, po.collides(co));
+
+        //Choice: Right, False
+        po.width = 2;
+        po.height = 2;
+        po.pos.x = 5;
+        po.pos.y = 5;
+        Assertions.assertEquals(true, po.collides(co));
+
+        //Choice: Down Right, False
+        po.width = 2;
+        po.height = 2;
+        po.pos.x = 5;
+        po.pos.y = 4;
+        Assertions.assertEquals(true, po.collides(co));
+
+        //Choice: Down, False
+        po.width = 2;
+        po.height = 2;
+        po.pos.x = 4;
+        po.pos.y = 4;
+        Assertions.assertEquals(true, po.collides(co));
+
+        //Choice: Down Left, False
+        po.width = 2;
+        po.height = 2;
+        po.pos.x = 3;
+        po.pos.y = 4;
+        Assertions.assertEquals(true, po.collides(co));
+
+        //Choice: Left, True
+        po.width = 2;
+        po.height = 2;
+        po.pos.x = -3;
+        po.pos.y = 6;
+        Assertions.assertEquals(false, po.collides(co));
     }
 
-    @Test
-    void exportToJsonNullTest(){
-        Assertions.assertNull(po.exportToJSON());
-    }
 }

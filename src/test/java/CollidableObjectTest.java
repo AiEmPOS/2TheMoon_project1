@@ -21,13 +21,6 @@ public class CollidableObjectTest {
     }
 
     @Test
-    void collidableObjectTest(){
-        Assertions.assertEquals("", collidableObject.flag);
-        Assertions.assertEquals(0, collidableObject.height);
-        Assertions.assertEquals(0, collidableObject.width);
-    }
-
-    @Test
     void setImageSizeTest(){
         //BCC
 
@@ -50,13 +43,4 @@ public class CollidableObjectTest {
         Assertions.assertEquals(0, collidableObject.width);
     }
 
-    @Test
-    public void exportToJSONTest(){
-        JSONObject item = collidableObject.exportToJSON();
-
-        Assertions.assertNull(item.get("id"));
-        Assertions.assertEquals("COLLISION", item.get("type"));
-        Assertions.assertEquals(0, item.get("x"));
-        Assertions.assertEquals(0, item.get("y"));
-    }
 }
