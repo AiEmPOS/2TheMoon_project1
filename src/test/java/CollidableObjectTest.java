@@ -1,3 +1,7 @@
+/* Copyright (C) 2021 Worameth Siritanakorn - All Rights Reserved
+ * You may use, distribute and modify this code under the terms of the MIT license.
+ */
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

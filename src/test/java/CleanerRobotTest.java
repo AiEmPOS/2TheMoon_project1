@@ -27,9 +27,10 @@ public class CleanerRobotTest {
         getDistanceMethod.setAccessible(true);
     }
 
-    @Test // Pair-Wise [ISP Criteria]
-    void TestGetDistance() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+    @Test
+    void TestGetDistance() throws InvocationTargetException, IllegalAccessException {
         System.out.println("=== Test RobotCleaner.getDistance ===");
+        // Interface-Based // Pair-Wise [ISP Criteria]
         // < 0, < 0, < 0, < 0
         PVector data_1 = new PVector(2,3);
         PVector data_2 = new PVector(3,2);
@@ -99,6 +100,23 @@ public class CleanerRobotTest {
         data_2.y = 0;
         Assertions.assertEquals(38.21,(double) Math.round((double) getDistanceMethod.invoke(Temp_CleanerRobot,data_1,data_2) * 100) / 100);
         System.out.println("Test Case 9 Passed");
+
+        //Functionality-Based // ACoC [ISP Criteria]
+        // True
+        data_1.x = 45;
+        data_1.y = 12;
+        data_2.x = 45;
+        data_2.y = 12;
+        Assertions.assertEquals(data_1,data_2);
+        System.out.println("Test Case 10 Passed");
+
+        // False
+        data_1.x = 54;
+        data_1.y = 44;
+        data_2.x = 62;
+        data_2.y = 84;
+        Assertions.assertNotEquals(data_1,data_2);
+        System.out.println("Test Case 11 Passed");
     }
 
 }

@@ -113,7 +113,7 @@ public class ParticleTest {
 
     //Multiple Base Choice
     @Test
-    void TestEmissionAcceleration() {
+    void TestEmissionNewAcceleration() {
 
         AreaEmission areaEmission;
         PVector result;
@@ -186,7 +186,7 @@ public class ParticleTest {
     }
 
     @Test
-    void TestEmissionVelocity() {
+    void TestEmissionNewVelocity() {
 
         AreaEmission areaEmission;
         PVector result;

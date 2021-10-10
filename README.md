@@ -1,6 +1,6 @@
 # 2TheMoon Project
 ## Particle Class Test
-### 1.TestNewPosition()
+### 1.TestEmissionNewPosition()
 **Test function:** AreaEmission.newPosition()
 
 **Goal:** To test if the new position is calculated correctly
@@ -12,16 +12,16 @@
 **Exceptional Behavior:** --
 
 **Model:**
-![TestNewPosition_Model](https://i.imgur.com/0nHHLzq.png)
+- ![TestNewPosition_Model](https://i.imgur.com/0nHHLzq.png)
 
-**Combination:** Pair-wise
+**Combination:** Pair-wise	
 
 **Test Case:**
-![TestNewPosition_Test_Case](https://i.imgur.com/9lMIVjo.png)
+- ![TestNewPosition_Test_Case](https://i.imgur.com/9lMIVjo.png)
 	
 ---
-
-### 2.TestEmissionVelocity()
+	
+### 2.TestEmissionNewVelocity()
 **Test function:** AreaEmission.newVelocity(float phi)
 
 **Goal:** To test if new velocity vector is calculated correctly
@@ -33,16 +33,16 @@
 **Exceptional Behavior:** --
 
 **Model:**
-![TestEmissionVelocity_Model](https://i.imgur.com/w7KQYXA.png)
+- ![TestEmissionVelocity_Model](https://i.imgur.com/w7KQYXA.png)
 
-**Combination:** MBCC
+**Combination:** MBCC	
 
 **Test Case:**
-![TestEmissionVelocity_Test_Case](https://i.imgur.com/tqxh23J.png)
+- ![TestEmissionVelocity_Test_Case](https://i.imgur.com/tqxh23J.png)
 	
 ---
-
-### 3.TestEmissionAcceleration()
+	
+### 3.TestEmissionNewAcceleration()
 **Test function:** AreaEmission.newAcceleration(float phi)
 
 **Goal:** To test if new acceleration is calculated correctly
@@ -54,15 +54,15 @@
 **Exceptional Behavior:** --
 
 **Model:**
-![TestEmissionAcceleration_Model](https://i.imgur.com/w7KQYXA.png)
+- ![TestEmissionAcceleration_Model](https://i.imgur.com/w7KQYXA.png)
 
-**Combination:** MBCC
+**Combination:** MBCC	
 
 **Test Case:**
-![TestEmissionAcceleration_Test_Case](https://i.imgur.com/EbK2pDH.png)
+- ![TestEmissionAcceleration_Test_Case](https://i.imgur.com/EbK2pDH.png)
 		
 ---
-
+	
 ### 4.TestRunParticle()
 **Test function:** ParticleSystem.runParticle()
 
@@ -75,15 +75,15 @@
 **Exceptional Behavior:** --
 
 **Model:**
-![TestRunParticle_Model](https://i.imgur.com/dRwY3gF.png)
+- ![TestRunParticle_Model](https://i.imgur.com/dRwY3gF.png)
 
-**Combination:** ECC
+**Combination:** ECC	
 
 **Test Case:**
-![TestRunParticle_Test_Case](https://i.imgur.com/lnlpuc5.png)
+- ![TestRunParticle_Test_Case](https://i.imgur.com/lnlpuc5.png)
 		
 ---
-
+	
 ### 5.TestNewParticle()
 **Test function:** ParticleSystem.runParticle()
 
@@ -96,12 +96,12 @@
 **Exceptional Behavior:** --
 
 **Model:**
-![TestNewParticle_Model](https://i.imgur.com/sogQ5E7.png)
+- ![TestNewParticle_Model](https://i.imgur.com/sogQ5E7.png)
 
-**Combination:** ACoC
+**Combination:** ACoC	
 
 **Test Case:**
-![TestNewParticle_Test_Case](https://i.imgur.com/HAb8ink.png)
+- ![TestNewParticle_Test_Case](https://i.imgur.com/HAb8ink.png)
 	
 ---
 
@@ -109,7 +109,7 @@
 ### 6.TestGetDistance()
 **Test function:** CleanerRobot.getDistance()
 
-**Goal:** to test if the distance value is correctly provided.
+**Goal:** to test if the distance value is correctly provided. 
 
 **Input:** PVector , PVector
 
@@ -118,13 +118,19 @@
 **Exceptional Behavior:** --
 
 **Model:**
-![TestGetDistance_Model](https://i.imgur.com/xhPqfYX.png)
+- Interface-Based characteristic
+	- ![TestGetDistance_Model_1](https://i.imgur.com/xhPqfYX.png)
+- Functionality-Based characteristic
+	- ![TestGetDistance_Model_2](https://i.imgur.com/Ty3tJEP.png)
 
-**Combination:** Pair-Wise
+**Combination:** Pair-Wise, ACoC
 
 **Test Case:**
-![TestGetDistance_Test_Case](https://i.imgur.com/sYF5eTL.png)
-	
+- Interface-Based characteristic [ Pair-Wise]
+	- ![TestGetDistance_Test_Case](https://i.imgur.com/sYF5eTL.png)
+- Functionality-Based characteristic [ ACoC ]
+	- ![TestGetDistance_Model_2](https://i.imgur.com/DTbDQYZ.png)
+		
 ---
 ## Enemy Class Test
 ### 7.TestCollides()
@@ -139,12 +145,12 @@
 **Exceptional Behavior:** --
 
 **Model:**
-![TestCollides_Model](https://i.imgur.com/sLhGk3G.png)
+- ![TestCollides_Model](https://i.imgur.com/sLhGk3G.png)
 
 **Combination:** ECC
 
 **Test Case:**
-![TestCollides_Test_Case](https://i.imgur.com/dXNrWUU.png)
+- ![TestCollides_Test_Case](https://i.imgur.com/dXNrWUU.png)
 
 ---
 
@@ -161,12 +167,12 @@
 **Exceptional behavior:** --
 
 **Model:**
-![TestGetTileType_Model](https://i.imgur.com/r9fhrYb.png)
+- ![TestGetTileType_Model](https://i.imgur.com/r9fhrYb.png)
 
 **Combination:** ACoC
 
 **Test Case:**
-![TestGetTileType_Test_Case](https://i.imgur.com/xPru1TC.png)
+- ![TestGetTileType_Test_Case](https://i.imgur.com/xPru1TC.png)
 
 ---
 
@@ -182,11 +188,9 @@
 **Exceptional behavior:** --
 
 **Model:**
-![TestGetPImage_Model](https://i.imgur.com/wWHBXVe.png)
+- ![TestGetPImage_Model](https://i.imgur.com/wWHBXVe.png)
 
 **Combination:** ECC
 
 **Test Case:**
-![TestGetPImage_Test_Case](https://i.imgur.com/7OaA0uw.png)
-
----
+- ![TestGetPImage_Test_Case](https://i.imgur.com/7OaA0uw.png)
