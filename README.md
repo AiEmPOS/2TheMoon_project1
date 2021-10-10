@@ -66,9 +66,9 @@
 ### 4.TestRunParticle()
 **Test function:** ParticleSystem.runParticle()
 
-**Input:** ActiveParticle< Particle >[] < ArrayList >
+**Goal:** To test if the run function is perform correctly, and the dead particle is sent to InactiveParticle array list
 
-**Goal:** To test if the run function is perform correctly and the dead particle is sent to InactiveParticle array list
+**Input:** ActiveParticle< Particle >[] < ArrayList >
 
 **Return:** ActiveParticle< Particle >[] < ArrayList >, InactiveParticle< Particle >[] < ArrayList >
 
@@ -194,3 +194,53 @@
 
 **Test Case:**
 - ![TestGetPImage_Test_Case](https://i.imgur.com/7OaA0uw.png)
+
+
+---
+
+### 10.CollisionTest()
+**Test function:** Tile.getPImage()
+
+**Goal:** To test if the object has collided.
+
+**Input:** width, height, position.x, position.y
+
+**Return:** Boolean
+
+**Exceptional behavior:** --
+
+**Model:**
+- Interface-Based characteristic
+	- ![CollisionTest_Model_1](https://i.imgur.com/aesi14B.png)
+- Functionality-Based characteristic
+	- ![CollisionTest_Model_2](https://i.imgur.com/iIzHpl8.png)
+
+**Combination:** BCC
+
+**Test Case:**
+- Interface-Based characteristic
+	- ![CollisionTest_Test_Case_1](https://i.imgur.com/YINhI7H.png)
+- Functionality-Based characteristic
+	- ![CollisionTest_Test_Case_2](https://i.imgur.com/yhkMnjA.png)
+
+---
+
+### 11.setImageSizeTest()
+**Test function:** collidableObject.setImageHeight(), collidableObject.setImageWidth()
+
+**Goal:** To test if the object image size is changed after setting   
+
+**Input:** width, height
+
+**Return:** width, height
+
+**Exceptional behavior:** --
+
+**Model:**
+- ![CollisionTest_Model_1](https://i.imgur.com/8hy3mk1.png)
+
+
+**Combination:** BCC
+
+**Test Case:**
+- ![CollisionTest_Test_Case_1](https://i.imgur.com/NSYRLV4.png)
