@@ -28,19 +28,30 @@ public class CollidableObjectTest {
     }
 
     @Test
-    void setImageWidthTest(){
+    void setImageSizeTest(){
+        //BCC
+
+        //Base Choice: >0, >0
+        collidableObject.setImageHeight(6);
         collidableObject.setImageWidth(5);
+        Assertions.assertEquals(6, collidableObject.height);
         Assertions.assertEquals(5, collidableObject.width);
+
+        //Choice: 0, >0
+        collidableObject.setImageHeight(0);
+        collidableObject.setImageWidth(5);
+        Assertions.assertEquals(0, collidableObject.height);
+        Assertions.assertEquals(5, collidableObject.width);
+
+        //Choice: >0, 0
+        collidableObject.setImageHeight(6);
+        collidableObject.setImageWidth(0);
+        Assertions.assertEquals(6, collidableObject.height);
+        Assertions.assertEquals(0, collidableObject.width);
     }
 
     @Test
-    void setImageHeightTest(){
-        collidableObject.setImageHeight(5);
-        Assertions.assertEquals(5, collidableObject.height);
-    }
-
-    @Test
-    public void TestExportToJSON(){
+    public void exportToJSONTest(){
         JSONObject item = collidableObject.exportToJSON();
 
         Assertions.assertNull(item.get("id"));

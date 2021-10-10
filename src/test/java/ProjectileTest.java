@@ -20,6 +20,11 @@ public class ProjectileTest {
     void setup(){
         po = new ProjectileObject(sc, gs);
         co = new CollidableObject(sc, gs);
+
+        co.width = 4;
+        co.height = 4;
+        co.pos.x = 4;
+        co.pos.y = 5;
     }
 
     @Test
@@ -39,25 +44,57 @@ public class ProjectileTest {
 
     @Test
     void collisionFalseTest(){
-        //every attribute is 0
-        Assertions.assertEquals(false, po.collides(co));
+        //BCC
 
-
-    }
-
-    @Test
-    void collisionTrueTest(){
+        //Base Choice: >0, >0, >0, >0
         po.width = 2;
         po.height = 2;
         po.pos.x = 3;
         po.pos.y = 5;
-
-        co.width = 4;
-        co.height = 4;
-        co.pos.x = 4;
-        co.pos.y = 5;
-
         Assertions.assertEquals(true, po.collides(co));
+
+        //Choice: 0, >0, >0, >0
+        po.width = 0;
+        po.height = 2;
+        po.pos.x = 3;
+        po.pos.y = 5;
+        Assertions.assertEquals(true, po.collides(co));
+
+        //Choice: >0, 0, >0, >0
+        po.width = 2;
+        po.height = 0;
+        po.pos.x = 3;
+        po.pos.y = 5;
+        Assertions.assertEquals(true, po.collides(co));
+
+        //Choice: >0, >0, <0, >0
+        po.width = 2;
+        po.height = 2;
+        po.pos.x = -3;
+        po.pos.y = 5;
+        Assertions.assertEquals(false, po.collides(co));
+
+        //Choice: >0, >0, 0, >0
+        po.width = 2;
+        po.height = 2;
+        po.pos.x = 0;
+        po.pos.y = 5;
+        Assertions.assertEquals(false, po.collides(co));
+
+        //Choice: >0, >0, >0, <0
+        po.width = 2;
+        po.height = 2;
+        po.pos.x = 3;
+        po.pos.y = -5;
+        Assertions.assertEquals(false, po.collides(co));
+
+        //Choice: >0, >0, <0, >0
+        po.width = 2;
+        po.height = 2;
+        po.pos.x = -3;
+        po.pos.y = 0;
+        Assertions.assertEquals(false, po.collides(co));
+
     }
 
     @Test
