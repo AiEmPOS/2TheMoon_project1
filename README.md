@@ -1,6 +1,6 @@
 # 2TheMoon Project
 ## Particle Class Test
-### 1.TestNewPosition()
+### 1.TestEmissionNewPosition()
 **Test function:** AreaEmission.newPosition()
 
 **Goal:** To test if the new position is calculated correctly
@@ -21,7 +21,7 @@
 	
 ---
 
-### 2.TestEmissionVelocity()
+### 2.TestEmissionNewVelocity()
 **Test function:** AreaEmission.newVelocity(float phi)
 
 **Goal:** To test if new velocity vector is calculated correctly
@@ -42,7 +42,7 @@
 	
 ---
 
-### 3.TestEmissionAcceleration()
+### 3.TestEmissionNewAcceleration()
 **Test function:** AreaEmission.newAcceleration(float phi)
 
 **Goal:** To test if new acceleration is calculated correctly
