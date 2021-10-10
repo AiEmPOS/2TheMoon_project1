@@ -1,5 +1,5 @@
 /* Copyright (C) 2021 Phonarnun Tatiyamaneekul - All Rights Reserved
- * You may use, distribute and modify this code under the terms of the XYZ license.
+ * You may use, distribute and modify this code under the terms of the GPL license.
  */
 
 import org.junit.jupiter.api.*;
@@ -41,8 +41,20 @@ public class EnemyTest {
         Temp_CollidableObject.pos = new PVector(-27,-24);
         Temp_CollidableObject.height = 0;
         Temp_CollidableObject.width = 0;
+        //Check that Enemy
+        Boolean Enemy_IsOutsideTheMap = false;
+        if (Temp_Enemy.pos.x < 0 || Temp_Enemy.pos.y < 0) {
+            Enemy_IsOutsideTheMap = true;
+        }
+        Boolean CollidableObject_IsOutsideTheMap = false;
+        if (Temp_CollidableObject.pos.x < 0 || Temp_CollidableObject.pos.y < 0) {
+            CollidableObject_IsOutsideTheMap = true;
+        }
+        Assertions.assertTrue(Enemy_IsOutsideTheMap);
+        Assertions.assertTrue(CollidableObject_IsOutsideTheMap);
         // False since the height and width are 0
         Assertions.assertFalse((Boolean) getCollidesMethod.invoke(Temp_Enemy,Temp_CollidableObject));
+
         System.out.println("Test Case 1 Passed");
 
         // 0,0,>0,>0,0,0,>0,>0
@@ -54,6 +66,16 @@ public class EnemyTest {
         Temp_CollidableObject.pos.y = 0;
         Temp_CollidableObject.height = 37;
         Temp_CollidableObject.width = 55;
+        Enemy_IsOutsideTheMap = false;
+        if (Temp_Enemy.pos.x < 0 || Temp_Enemy.pos.y < 0) {
+            Enemy_IsOutsideTheMap = true;
+        }
+        CollidableObject_IsOutsideTheMap = false;
+        if (Temp_CollidableObject.pos.x < 0 || Temp_CollidableObject.pos.y < 0) {
+            CollidableObject_IsOutsideTheMap = true;
+        }
+        Assertions.assertFalse(Enemy_IsOutsideTheMap);
+        Assertions.assertFalse(CollidableObject_IsOutsideTheMap);
         Assertions.assertTrue((Boolean) getCollidesMethod.invoke(Temp_Enemy,Temp_CollidableObject));
         System.out.println("Test Case 2 Passed");
 
@@ -66,6 +88,16 @@ public class EnemyTest {
         Temp_CollidableObject.pos.y = 0;
         Temp_CollidableObject.height = 50;
         Temp_CollidableObject.width = 50;
+        Enemy_IsOutsideTheMap = false;
+        if (Temp_Enemy.pos.x < 0 || Temp_Enemy.pos.y < 0) {
+            Enemy_IsOutsideTheMap = true;
+        }
+        CollidableObject_IsOutsideTheMap = false;
+        if (Temp_CollidableObject.pos.x < 0 || Temp_CollidableObject.pos.y < 0) {
+            CollidableObject_IsOutsideTheMap = true;
+        }
+        Assertions.assertTrue(Enemy_IsOutsideTheMap);
+        Assertions.assertTrue(CollidableObject_IsOutsideTheMap);
         Assertions.assertTrue((Boolean) getCollidesMethod.invoke(Temp_Enemy,Temp_CollidableObject));
         System.out.println("Test Case 3 Passed");
     }
